@@ -1,0 +1,19 @@
+210127---> AZ-040T00: Automating Administration with PowerShell
+
+Day1 Attendance Link:
+https://rms-new.netlify.app/third_party?batch_header=210127
+Use Your Corporate E-mail Address
+Trainer Name: Pooja Sharma
+
+
+LET Portal(Student Portal) Login: Training details are available on this portal (Meeting Links, Recording Links, Reference Links, Qubits etc.)
+      Link:----- https://www.mykoenig.com/
+      Credentials Details:---- Email ID: Your Corporate Email ID, Password: 210127
+
+Achievement URL:
+ https://learn.microsoft.com/en-us/users/me/achievements?WT.mc_id=ilt_partner_webpage_wwl&ocid=3351797&redeem=LMYPMV
+
+
+
+DAY 1:----------------------------------------------------------------------------------------------------------------------
+
