@@ -634,3 +634,350 @@ e.g Azure File share ----connect on-prem
 New-PSDrive -Name Z -PSProvider FileSystem -Root "\\tzk2ddzm7gsoysardpvm.file.core.windows.net\fileshare1" -Persist
 
 
+
+
+DAY 3:-----------------------------------------------------------------------------------------------------------------------
+
+Day3 Attendance Link:
+https://rms-new.netlify.app/third_party?batch_header=210127
+Use Your Corporate E-mail Address
+Trainer Name: Pooja Sharma
+
+
+Module 05:----
+
+CIM & WMI (both are related technologies)-----> DMTF(Distributed Management Task Force)
+
+CIM: Common Information Model
+WMI: Windows Management Instrumentation
+
+
+connect to the common info repo which contains mgmt. information.
+
+i) Query the data
+ii) make the changes/manipulations/Invoke the methods
+
+
+WMI:--- WBEM(Web-based enterprise management), older technology--- preliminary standards &
+Proprietary technology
+only supported on Windows Operating System (client, server)
+
+
+
+CIM:--- newer technology--- based on open, cross platform standards
+Windows, LINUX, MacOS
+
+
+connect with Local computer & remote computer
+
+WMI Repository
+
+
+****CIM Cmdlets:
+multiple protocols---> connectivity
+COM: local communication
+DCOM: old Proprietary (remote communication)---dynamic ports
+WSMAN: remote comm. --- static ports
+ Port 5985---WSMAN Listener (HTTP)--- by default
+ Port 5986---Secure Listener (HTTPS)--- if certificate is available
+
+3 Types of connection:
+
+i) Local connections:  access & comm. with local computer repo
+
+ii) Ad-hoc connections: (temporary) access & comm with remote computer repo
+ -computername parameter
+
+iii) CIM sessions: (Persistent/permanent) access & comm with remote computer repo
+
+get-ciminstance -cimsession .......... -classname .............
+
+
+****WMI Cmdlets
+
+2 Types of connection:
+
+i) Local connections:  access & comm. with local computer repo
+
+ii) Ad-hoc connections: (temporary) access & comm with remote computer repo
+ -computername parameter
+
+session based connectivity is not possible.
+
+
+CIM    Vs     WMI
+
+CIM
+1.cross platform
+2. large no. of cmdlets
+3. open standards
+4. 3 types of connections
+5. tab completion is possible
+
+
+WMI
+1.supported on win
+2. less cmdlets
+3. preliminary standards & Proprietary technology
+4. 2 types of connections
+5. tab completion is not possible
+
+
+
+Repository info
+h/w, s/w, h/w drivers, services, roles, process, user accounts, configurations
+
+
+Query the data:
+
+Workflow?
+1. search for the appropriate class
+2. decide CIM or WMI
+3. use that technology
+
+
+
+Filter instances:----
+
+-filter parameter
+
+condition
+
+true---kept
+false---remove
+
+
+Conditional Operators
+
+1. equals to                    =        -eq
+2. not equals to               !=        -ne
+3. greater than                 >         -gt
+4. less than                    <         -lt
+5. greater than or equals to   >=         -ge
+6. less than or equals to      <=          -le
+
+
+WQL(WMI Query Language):  WIM and CIM
+
+subset of SQL
+
+
+Employee table---- 1000 employees
+
+sr.no empid  empname  department designation
+
+Query: select * from tablename
+
+select * from employee
+
+select * from employee where empid = 10
+
+
+
+Querying the data from the classes---->WQL
+
+select * from classname
+
+select * from classname  where condition
+
+
+-query parameter
+
+
+
+**** Invoke the method: make changes by using methods
+
+action---performing on the object.
+
+Direct Invocation:
+
+get-member----methods
+
+1. (cmdlet).method(..)
+
+or
+
+2. $var = cmdlet
+ $var.method()
+
+
+1. Invoke-wmimethod
+
+Invoke-wmimethod -name .............. -argumentlist ...........
+
+-argumentlist (system.object)
+
+2. Invoke-cimmethod
+
+Invoke-cimmethod -methodname .............. -arguments....
+
+ -arguments (system.collection.idictionary)
+
+
+@{key = value}
+
+
+Module 06:
+
+Variables:----
+
+
+Limitation of Pipeline:  uni-directional (left to right)
+
+
+store diff types of values & objects in memory
+
+integer, string, Boolean, double etc.
+
+
+PSDrive----- Variable:
+
+
+Types of Variables:
+1. User-defined variables:
+created & maintained by the user.
+
+2. Build-in Variable (default)
+created & maintained by PowerShell.
+
+i) Automatic variables:  store the state info of the PS.
+
+e.g. $pshome, $psversiontable, $pwd
+
+ii) Preference variables: store the user preferences for the PS.
+populated with default values
+
+
+syntax:
+
+$varname = ......
+
+can we use the special char in the name of the variables? Yes
+
+${l@g} = .........
+
+can we use the whitespaces ? Yes
+
+${user name} = ..........
+
+
+Explicitly define:
+
+[int]$var = "80"
+
+
+*****Array: data structure
+store the multiple values or objects.
+
+
+int, string, double, results of cmdlets etc.
+
+
+on the basis of index no.
+
+e.g. 5 items---- index no 4
+1[0] 
+2[1]
+3[2]
+4[3]
+5[4]
+
+
+access the particular item--- on the basis of index no.
+
+
+Limitation:----
+Fixed-size array (static)
+
+
+
+***** Arraylists: data structure
+
+store the multiple values or objects
+
+stored & accessed on the basis of index no.
+
+dynamic in nature
+
+add or remove items
+
+
+Methods:
+i) add()----- add item
+
+ii) remove()--- remove item
+
+iii) removeat() ---- remove the item on the basis of index no
+
+
+syntax
+
+[System.collections.arraylist]$arraylist = ...........,............,..............
+
+
+**** Hash Tables/ Dictionary/ Associative Array
+
+Data structure
+
+multiple values/ items
+
+store & access the items---on the basis of index number
+
+
+key/name -value pair
+
+key(string)---unique identifier
+
+e.g. 
+
+computername - ipaddress or vice-versa
+
+
+Create Hash Table:
+1. begin with @ sign
+2. enclose in {} braces
+3. = sign to separate each key from its value
+4. ; line break to separate key-value pair
+
+
+syntax:----
+
+@{key=value; key1=value}
+
+
+store the Hash table in the variable:
+
+$hash = @{key=value; key1=value}
+$hash
+
+operations:----
+$hash.add()
+$hash.remove()
+$hash.removeat()
+
+
+Two Types of Hash Tables:---
+
+1. Unordered Hash Table (By default)
+PS1.0 & PS2.0
+
+@{key=value; key1=value}
+
+2. Ordered Hash Table
+PS3.0
+
+[ordered]@{key=value; key1=value}
+
+
+
+TasK:-----
+
+1. prefer to use the native cmdlet
+
+2. search the method using the get-member
+
+3. Use .NET framework classes
+
+
+[]::method()
+[]::property
