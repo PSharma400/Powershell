@@ -981,3 +981,355 @@ TasK:-----
 
 []::method()
 []::property
+
+
+
+DAY 4:----------------------------------------------------------------------------------------------------------------------
+
+Day4 Attendance Link:
+https://rms-new.netlify.app/third_party?batch_header=210127
+Use Your Corporate E-mail Address
+Trainer Name: Pooja Sharma
+
+
+
+Module07:---- PS Scripting
+
+scripting is all about automation.
+
+Complex tasks or Repetitive tasks
+
+
+process of writing the set of statements in PS language & storing those statements in a text file with .ps1 extension.
+
+
+Benefits:
+1. Saves time
+2. Automation
+3. less chances of errors
+4. Customization
+5. improved efficiency, performance, consistency
+6. saving cost
+7. Reusability
+
+
+
+Scripts Components:
+1. Module
+2. Cmdlets
+3. Variables
+4. Array
+5. Arraylist
+6. hash tables
+7. scripting constructs (flow control, looping, jumping)
+8. Parameters
+9. Functions
+10. error handling & troubleshooting
+11. signing a script
+
+
+
+****Execution Policy
+
+local computer, current user or particular session
+
+
+
+i. Undefined: win client--restricted , win server--remotesigned
+ii. unrestricted: non-win computers
+iii. restricted: win client computers  (.ps1,.psm1,.ps1xml)
+iv. allsigned: signed by the creator
+v. remotesigned: win server computers --- digital sign
+vi. bypass
+vii. default
+restricted: win client computers
+remotesigned: win server computers
+
+
+
+
+
+
+
+Best Practices:
+use # comments
+
+
+7. scripting constructs (flow control, looping, jumping)
+
+i) Flow control: manage inputs & execution flow 
+
+I. If construct
+
+if(condition)True
+{
+//statement
+}
+
+
+II. If else 
+
+if(condition)True/False
+{
+//statement
+}
+else
+{
+//statement
+}
+
+
+III. If else If
+
+if(condition)True/False
+{
+//statement
+}
+elseif(condition)
+{
+//statement
+}
+else
+{
+//statement
+}
+
+
+IV. Switch 
+
+switch(exp)
+{
+case1 action
+case2 action
+.
+.
+casen  action
+default action
+}
+
+
+ii. Looping constructs: iterative or repetitive tasks
+
+
+I. While loop : Pre-condition check loop
+
+while(condition)
+{
+//statements
+}
+
+1
+2
+3
+4
+5
+
+II. Do while loop: Post-condition check loop
+
+do
+{
+//statements
+}
+while(condition)
+
+
+III. for loop
+
+for($initialcounter; condition; updatecounter)
+{
+//statements
+}
+
+
+Infinite for loop
+
+for(; ;)
+{
+//statements
+}
+
+
+
+IV. foreach
+
+foreach($var in $array)
+{
+//statement
+}
+
+
+
+iii) Jumping Constructs
+
+I. Break: stop the execution
+
+break
+
+II. continue: skip the execution of the loop
+
+continue
+
+
+Task: create the 5 folders with your name on the C:\----------- flavius1,flavius2....Flavius5
+
+looping construct
+for
+
+
+Task: create a folder -----victor2024-12-19 02-32-00-AM
+
+
+
+Write-Host
+
+Write-output
+
+
+**** accept the input from the user
+
+Read-host
+
+
+8. Parameters
+
+param()
+
+
+
+validation rules
+
+
+9. Functions: block of reusable code
+
+is a list of PS statements that has a name which we assign
+
+
+function function-name
+{
+//statements
+}
+
+
+**** Error
+
+diff or deviation b/w actual o/p and the expected o/p
+
+
+Reasons:----
+1. syntax error
+2. logical error
+3. typo error
+4. query the object which does not exist
+5. comm. with the m/c which is offline
+
+
+1. terminating error
+2. non-terminating error
+
+
+Try-catch-Finally
+
+
+
+try
+{
+//statement
+}
+catch
+{
+}
+finally
+{
+}
+
+$error---automatic error
+
+
+
+**** Troubleshooting a script
+
+Breakpoints
+
+1) console
+
+command, Line, Variable
+
+2) ISE
+
+Line 
+
+
+
+**** sign a script
+
+Encryption ----plain text in to the cipher text
+Decryption ---- cipher text in to plain text
+
+key: public key 
+private key
+
+i. symmetric : E & D --- same key
+ii. asymmetric : E(private) --D (public) or vice-versa
+
+Hash functions
+
+
+Digital certificate
+
+CA(Certificate Authority)
+
+
+i) trusted third party CA
+ii) Internal CA
+
+
+Two steps:
+1. install code signing certificate
+2. sign the script
+
+
+**** ISE Steroid
+
+
+Module 08:
+
+Remoting
+
+Various technologies:---
+WMI
+CIM
+
+-computername
+
+WSMAN: remote comm. --- static ports
+ Port 5985---WSMAN Listener (HTTP)--- by default
+ Port 5986---Secure Listener (HTTPS)--- if certificate is available
+
+
+-computername
+
+Remoting:
+1. one-to-one
+2. one-to-many
+
+
+Throttling
+by default, only 32 computer at once
+
+
+-throttlelimit 100
+
+factors:
+utilize more bandwidth
+more CPU
+More RAM
+
+
+1-32, 33-64
+33-100---- queue
+
+
+Persistent Connection/ Sessions/PSsession
+
+
+PS3.0--- $using:
