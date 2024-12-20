@@ -1283,6 +1283,7 @@ i) trusted third party CA
 ii) Internal CA
 
 
+
 Two steps:
 1. install code signing certificate
 2. sign the script
@@ -1313,6 +1314,9 @@ Remoting:
 2. one-to-many
 
 
+
+
+
 Throttling
 by default, only 32 computer at once
 
@@ -1332,4 +1336,204 @@ More RAM
 Persistent Connection/ Sessions/PSsession
 
 
+
 PS3.0--- $using:
+
+
+DAY 5:----------------------------------------------------------------------------------------------------------------------
+
+Day5 Attendance Link:
+https://rms-new.netlify.app/third_party?batch_header=210127
+Use Your Corporate E-mail Address
+Trainer Name: Pooja Sharma
+
+
+FF Link:
+https://rms.koenig-solutions.com/Feedback/FinalFeedback.aspx?d=oETKMOrCR7lXUf0UgMFBStY/qP5hcpA2Lvfnly+9omM=
+
+MTM Link:
+https://www.metricsthatmatter.com/url/u.aspx?2493B31DC217511303
+
+
+Module 11:-----
+
+Jobs
+
+1. Background Jobs
+
+Three types:
+
+i. Local jobs: on the local computer 
+
+access the local resource
+
+cmdlet: start-job -scriptblock { cmdlet }
+
+ii. Remote jobs: on the remote computer
+
+access the remote resource
+
+invoke-command -computername .......... -scriptblock {cmdlet} -asjob -jobname ..........
+
+iii. CIM/WMI jobs: local & remote computer
+
+access the local/remote resource
+
+CIM Job:--- start-job
+
+2. Scheduled Jobs
+
+Win PS background jobs + task schedular tasks
+
+
+
+
+Module 09:---
+
+Azure Administration with PS:-----
+
+
+Cloud or Hybrid
+
+Services:---- simple to complex service
+
+IaaS, PaaS, SaaS
+
+PAYG(pay as you go model)
+
+shared responsibility
+IaaS:  greater control---> VM
+SaaS: least control
+
+
+Azure Account
+Managment Group
+Subscription
+Resource Group
+Resource (IaaS, SaaS, PaaS)
+
+
+GUI Web app--- portal.azure.com
+
+
+
+region--- Cost
+ 70+ region
+
+
+ARM(Azure resource Manager)
+
+resource Providers:---- VM---Microsoft.compute
+
+webapp---- Microsoft.web
+
+
+
+
+WHY PS?
+
+Automation
+repetitive task
+review all configurations
+
+
+
+
+**** Cloud Shell: browser based shell
+
+firstly you need to create the storage account for this shell
+
+IaC---- ARM Template(.json), Bicep file(.bicep)
+
+pre-configured
+
+SaaS ---- managed service
+
+two environments:---
+1. PowerShell
+2. Bash 
+
+prefix: az in the noun
+
+
+Azure PowerShell:--- extension of PS
+
+2018--- az module
+
+
+update-module -name az
+
+install-module -name az
+
+
+Pre-requisite:-----
+
+1. computer
+win
+Linux
+MacOS
+
+2. Install PS Base product
+
+Win--- PS5.1(Win PS), PS Core(6.0-latest)
+
+Linux---PS Core(6.0-latest)
+
+MacOS---PS Core(6.0-latest)
+
+3. Install Az module from PS gallery
+
+install-module -name az
+
+4. Sign-in/ connect with your account
+
+5. do administration
+
+
+
+Module 10:----
+
+Microsoft 365 services administration with PS
+
+1. Entra ID (former name-- Azure AD)
+
+module: Microsoft.graph
+
+User---assign a license(exchange online service plan)
+
+2. Exchange online
+
+Module: exchangeonlinemanagement
+
+3. SharePoint online
+
+Module: Microsoft.online.sharepoint.powershell
+
+4. Microsoft Teams
+
+Module: Microsoftteams
+
+M@r!@n1234
+
+
+
+update-module .............
+
+
+CBH:---
+
+Platyps module
+
+
+create markdown help
+
+external help---- XML file
+
+
+About file
+
+create markdownabouthelp 
+
+external help
+
+
